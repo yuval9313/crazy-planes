@@ -1,22 +1,21 @@
 import websockets
-import asyncio
 import struct
 
-async def hello(websocket, path):
-    print('Server started')
-    
-    while True:
-        name = await websocket.recv()
-        print(f'< {name}')
 
-        greeting = f'Hello {name}!'
-        message_len = struct.pack('!I', len(greeting))
-        print(message_len)
-        await websocket.send(message_len)
-        await websocket.send(greeting)
-        print(f'> {greeting}')
+class WebSocketServer:
+    def __init__(self, address, port, run_callback):
+        self.start_server = websockets.serve(self.run, address, port)
+        self.web_socket = None
+        self.run_callback = run_callback
 
-start_server = websockets.serve(hello, "localhost", 5000)
+    def run(self, web_socket, path):
+        self.web_socket = web_socket
+        self.run_callback()
 
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()
+    async def receive(self):
+        return await self.web_socket.recv()
+
+    async def send(self, message):
+        message_len = struct.pack('!I', len(message))
+        await self.web_socket.send(message_len)
+        await self.web_socket.send(message)
