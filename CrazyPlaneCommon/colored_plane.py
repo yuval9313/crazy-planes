@@ -1,3 +1,4 @@
+import json
 from CrazyPlanesCore import Plane
 
 
@@ -7,4 +8,4 @@ class ColoredPlane(Plane):
         self._color = color
 
     def display(self):
-        return f"{self._color} is in {self.pos} Score: {self._game_strategy.score}"
+        return json.dumps({"color": self._color, "pos": self.pos, "score": self._game_strategy.score})

@@ -2,7 +2,7 @@ import asyncio
 import time
 import json
 
-from CrazyPlanesConsole.planes.colored_plane import ColoredPlane
+from CrazyPlaneCommon.colored_plane import ColoredPlane
 from CrazyPlanesCore import GameBoard, StandardStrategy
 from CrazyPlanesServer.web_socket_server import WebSocketServer
 
