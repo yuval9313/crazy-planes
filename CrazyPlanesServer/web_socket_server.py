@@ -8,12 +8,12 @@ class WebSocketServer:
         self.web_socket = None
         self.run_callback = run_callback
 
-    def run(self, web_socket, path):
+    async def run(self, web_socket, path):
         self.web_socket = web_socket
-        self.run_callback()
+        await self.run_callback()
 
-    async def receive(self):
-        return await self.web_socket.recv()
+    def receive(self):
+        return self.web_socket.recv()
 
     async def send(self, message):
         message_len = struct.pack('!I', len(message))
