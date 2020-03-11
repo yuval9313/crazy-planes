@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyPlanes.gui", "CrazyPlanes.gui\CrazyPlanes.gui.csproj", "{DD68EE97-B6FB-442D-8E5E-18733E7E9B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyPlanes.core", "CrazyPlanes.core\CrazyPlanes.core.csproj", "{4180C574-DCDC-45A5-8FDA-B23F5521B347}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD68EE97-B6FB-442D-8E5E-18733E7E9B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD68EE97-B6FB-442D-8E5E-18733E7E9B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD68EE97-B6FB-442D-8E5E-18733E7E9B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD68EE97-B6FB-442D-8E5E-18733E7E9B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4180C574-DCDC-45A5-8FDA-B23F5521B347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4180C574-DCDC-45A5-8FDA-B23F5521B347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4180C574-DCDC-45A5-8FDA-B23F5521B347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4180C574-DCDC-45A5-8FDA-B23F5521B347}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDB145B4-0838-435D-A477-C6BC408BAE4E}
+	EndGlobalSection
+EndGlobal

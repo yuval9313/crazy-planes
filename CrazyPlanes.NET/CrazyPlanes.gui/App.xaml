@@ -1,0 +1,11 @@
+﻿<Application x:Class="CrazyPlanes.gui.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CrazyPlanes.gui"
+             Startup="AppStartup">
+    <Application.Resources>
+        <Style x:Key="winAll" TargetType="{x:Type Window}">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+    </Application.Resources>
+</Application>
