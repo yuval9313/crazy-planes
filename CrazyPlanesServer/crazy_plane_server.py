@@ -25,7 +25,9 @@ class CrazyPlaneServer:
             planes.append(ColoredPlane(plane["color"], StandardStrategy(width, height)))
 
         game_board = GameBoard(width, height, planes)
-        await self.start_game(game_board)
+
+        if await self.server.receive() == "start":
+            await self.start_game(game_board)
 
     async def start_game(self, game_board):
         done = False
