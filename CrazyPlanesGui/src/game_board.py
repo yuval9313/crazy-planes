@@ -37,7 +37,7 @@ class GameBoardGui(wx.Panel):
 
         self.grid = wx.FlexGridSizer(rows=width, cols=height, vgap=0, hgap=0)
         for i in range(width * height):
-            self.panels.append(wx.Panel(self, style=wx.SIMPLE_BORDER | wx.EXPAND, size=(width*5, height*5)))
+            self.panels.append(wx.Panel(self, style=wx.SIMPLE_BORDER | wx.EXPAND, size=(40, 40)))
 
         self.grid.AddMany(self.panels)
         self.main_sizer.Add(self.grid, 0, wx.ALL | wx.CENTER, 5)
@@ -46,7 +46,7 @@ class GameBoardGui(wx.Panel):
     def initiate_game(self, planes):
         self.game = GameBoard(self.width, self.height, planes)
         self.score_board.generate_board(self.game.board_state)
-        self.timer.Start(300)
+        self.timer.Start(10)
 
     def run(self):
         if not self._done:

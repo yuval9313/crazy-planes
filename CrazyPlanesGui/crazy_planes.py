@@ -1,5 +1,4 @@
 import wx
-from concurrent.futures import ThreadPoolExecutor
 from CrazyPlanesGui.src import SizeRegistrationPanel, PlaneRegistrationPanel
 from CrazyPlanesGui.src.factories import StandardFactory
 from CrazyPlanesGui.src.game_board import GameBoardGui
